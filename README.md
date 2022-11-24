@@ -1,4 +1,4 @@
-！[alt text](/images/House-Cleaning-Banner.png "Logo Title Text 1")
+![alt text](/images/github-using.jpeg "Logo Title Text 1")
 
 # CSS_Selector_Exercise
  CSS Cascade, Selection and Pseudo Selectors
