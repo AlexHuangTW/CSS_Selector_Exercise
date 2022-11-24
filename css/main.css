@@ -1,0 +1,133 @@
+/* start overriding default browser styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+    background-color: rgb(144, 229, 165);
+    color: rgb(255, 255, 255);
+  
+  
+}
+
+/* 滿版設定 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {display: none; }
+
+header {
+    background-color: rgb(254, 153, 51);
+    margin-bottom: 40px;
+    margin-top: -5px;
+   
+}
+
+.mylist::after {
+    content: "To Do List";
+    color: rgb(85, 85, 85);
+}
+
+main {text-align: center;}
+
+main > article {
+    text-align: left;
+    display: inline-block;
+    width: 20%;
+
+    border: thin solid white;
+    border-radius: 8px;
+    margin: 0 12px;
+    
+}
+
+main article ul li {
+    list-style-type: none;
+    color: black;
+    padding: 7px;
+}
+
+/* selectors always start with a hash */
+#todo {
+    border: 2px solid rgb(94, 94, 94);
+    background-color: rgb(255, 255, 255);
+}
+#inprogress {
+    border: 2px solid rgb(94, 94, 94);
+    background-color: rgb(255, 48, 48)
+}
+#done {
+    border: 2px solid rgb(94, 94, 94);
+    background-color: rgb(2, 198, 15);
+    
+
+}
+
+
+article:first-of-type h2 {
+    color: rgb(73, 73, 73);
+}
+
+#inprogress .inprogress {color: rgb(222, 115, 27);}
+
+#inprogress input[type="checkbox"]:checked::after {
+    content: '\2139';
+    /* width: 25px;
+    height: 25px; */
+    padding: 4px;
+    border-radius: 50%;
+    background-color: rgb(186, 174, 0);
+    border: 2px solid rgb(255, 238, 0);
+    font-size: 0.5em;
+    text-align: center;
+    top: 0px;
+    left: 150px;
+    position: relative;
+    animation: fadeIn 1s;
+     
+  }
+
+#done input[type="checkbox"]:checked::after {
+    content: '\2713';
+    /* width: 25px;
+    height: 25px; */
+    padding: 4px;
+    border-radius: 50%;
+    background-color: rgb(62, 184, 255);
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 0.5em;
+    top: 0;
+    left: 150px;
+    position: relative;
+    animation: fadeIn 1s;
+    color: rgb(0, 0, 0);
+    text-align: center; 
+  }
+
+  input[type="checkbox"]:checked + .donetext {
+    color: rgb(255, 0, 0);
+    text-decoration: line-through;
+    
+  }
+  input[type="checkbox"]:checked + .inprogresstext {
+    background-color: azure;
+  }
+
+  article {
+    position: relative;
+  }
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
